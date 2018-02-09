@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Message list</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<h1>Edit message</h1>
+
+<form action="/message/{{message.key.id()}}/edit" method="post">
+  <input type="text" name="name" placeholder="Your name" value="{{message.name}}">
+
+  <input type="text" name="email" placeholder="Your email" value="{{message.email}}">
+
+  <textarea name="text" placeholder="Your message" required>
+    {{message.text}}
+  </textarea>
+
+  <input type="submit" value="Edit">
+</form>
+
+
+</body>
+</html>

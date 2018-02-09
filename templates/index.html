@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>SmartNinja basic Jinja template</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<h1>Welcome to Filton Guestbook</h1>
+
+<p>
+  <a href="/message-create">Add new message</a>
+</p>
+
+<ul>
+  {% for message in all_messages %}
+    <li>
+      {{ message.name }} ({{ message.email }}): {{ message.text }} - {{ message.created }}
+      <a href="/message/{{message.key.id()}}/details">See details</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+</body>
+</html>

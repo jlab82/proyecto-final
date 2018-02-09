@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>SmartNinja basic Jinja template</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<h1>Are you sure you want to delete the message?</h1>
+
+<form action="/message/{{ message.key.id() }}/delete" method="post">
+  <button type="submit">YES, delete!</button>
+</form>
+
+</body>
+</html>
